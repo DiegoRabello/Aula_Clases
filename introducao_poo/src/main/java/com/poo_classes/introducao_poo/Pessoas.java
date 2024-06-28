@@ -1,9 +1,13 @@
 package com.poo_classes.introducao_poo;
 
 public class Pessoas {
-    void cadastro() {
-        String Nome;
-        String CPF;
-        int RG;
+    public String nome;
+	public Object CPF;
+    int RG;
+    void imprimeCadastro() {
+        System.out.println("========== Cadastro da Pessoa ==========");
+        System.out.println("Nome: "+nome);
+        System.out.println("CPF: "+CPF);
+        System.out.println("RG: "+RG);
     }
 }
