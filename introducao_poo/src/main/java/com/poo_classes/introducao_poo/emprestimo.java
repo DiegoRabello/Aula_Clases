@@ -2,17 +2,16 @@ package com.poo_classes.introducao_poo;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-public class emprestimo {
-    private LocalDate dataEmprestimo;
-
+public class Emprestimo {
+    private LocalDate dtEmprestimo;
+    public LocalDate getDtEmprestimo() {
+        return dtEmprestimo;
+    }
+    public void setDtEmprestimo(LocalDate dtEmprestimo) {
+        this.dtEmprestimo = dtEmprestimo;
+    }
+    public LocalDate getdtDevolucao() {
+        return dtEmprestimo.plusDays(15);
+    }
     
-    public emprestimo(LocalDate dataEmprestimo) {
-        this.dataEmprestimo = dataEmprestimo;
-    }
-    public LocalDate getDataEmprestimo() {
-        return dataEmprestimo;
-    }
-    public LocalDate calcularDataDevolucao() {
-        return dataEmprestimo.plusDays(15);
-    }
 }

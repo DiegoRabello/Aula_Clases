@@ -8,7 +8,7 @@ public class Livro {
     private   int edicao;
     private   LocalDate dtLivro ;
     
-    public void setnomelivro(String nome){
+    public void setNomelivro(String nome){
         this.nome=nome;
     }
     public void setEdicaoLivro(int edicao){
@@ -20,10 +20,10 @@ public class Livro {
     public String getNome(){
         return nome;
     }
-    public int getedicao(){
+    public int getEdicao(){
         return edicao;
     }
-    public LocalDate getdtlivro(){
+    public LocalDate getDtlivro(){
         return dtLivro;
     }
 }

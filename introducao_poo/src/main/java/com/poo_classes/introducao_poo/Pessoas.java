@@ -23,7 +23,7 @@ public class Pessoas {
             this.RG=RG;
         }
     }
-    public String getnome() {
+    public String getNome() {
         return nome;
     }
     public String getCPF () {
