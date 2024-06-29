@@ -1,22 +1,53 @@
 package com.poo_classes.introducao_poo;
 
+import java.rmi.server.LogStream;
+
+import org.apache.commons.logging.Log;
+
 public class Endereco {
-    String Cidade;
-    String Logradouro;
-    String Complemento;
-    String Estado;
-    int numero;
+    private String Cidade;
+    private String Logradouro;
+    private String Complemento;
+    private String Estado;
+    private int    numero;
 
-    void imprimeEnderco() {
-        System.out.println("========== Cadastro Endereco ==========");
-        System.out.println("Cidade: "+ Cidade);
-        System.out.println("Estado: "+ Estado);
-        System.out.println("Logradouro: "+ Logradouro);
-        System.out.println("Número: "+ numero);
-        System.out.println("Complemento: "+Complemento);
-
-
-
-
+    public void setCidade (String Cidade) {
+       if ((Cidade.length()<=58)) {
+            this.Cidade=Cidade;
+       } 
     }
+    public void setLogradouro (String Logradouro) {
+        if ((Logradouro.length())<=100) {
+            this.Logradouro=Logradouro;
+        }
+    }
+    public void setComplemento (String Complemento) {
+        if ((Complemento.length())<=100) {
+            this.Complemento=Complemento;
+        }
+    }
+    public void setEstado (String Estado) {
+        if ((Estado.length())<=50) {
+            this.Estado = Estado;
+        }
+    }
+    public void setNumero (int numero) {
+        this.numero=numero;
+    }
+    public String getCidade() {
+        return Cidade;
+    }
+    public String getLogradouro() {
+        return Logradouro;
+    }
+    public String getComplemento() {
+        return Complemento;
+    }
+    public String getEstado() {
+        return Estado;
+    }
+    public int getNumero() {
+        return numero;
+    }
+    
 }

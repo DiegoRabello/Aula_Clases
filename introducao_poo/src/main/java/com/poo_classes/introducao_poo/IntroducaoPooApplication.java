@@ -12,7 +12,7 @@ public class IntroducaoPooApplication {
 		SpringApplication.run(IntroducaoPooApplication.class, args);
 		Scanner sc = new Scanner(System.in);
 		limpaConsole();
-    
+        
       
 
 	}
