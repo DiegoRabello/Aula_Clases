@@ -1,35 +1,49 @@
 package com.poo_classes.introducao_poo;
 
 public class Pessoas {
-    private String nome;
-	private String CPF;
-    private String RG;
-    
+    private static int contador=1;
 
+    private String nome;
+	private String cpf;
+    private String rg;
+    private int    idPessoa;
+
+    public int getIdPessoa() {
+        return idPessoa;
+    }
     public void setNome(String nome){
         this.nome=nome;
     }
-    public void setCpf(String CPF){
-        String cpfNumerico = CPF.replaceAll("\\D", "");
+    public void setcpf(String cpf){
+        String cpfNumerico = cpf.replaceAll("\\D", "");
         if ((cpfNumerico.length())==11) {
             
-            this.CPF=CPF;
+            this.cpf=cpf;
         }
     }
-    public void setRG (String RG) {
-        String rgNumerico = RG.replaceAll("\\D", "");
+    public void setrg (String rg) {
+        String rgNumerico = rg.replaceAll("\\D", "");
         if ((rgNumerico.length())==9) {
             
-            this.RG=RG;
+            this.rg=rg;
         }
     }
     public String getNome() {
         return nome;
     }
-    public String getCPF () {
-        return CPF;
+    public String getcpf () {
+        return cpf;
     }
-    public String getRG () {
-        return RG;
+    public String getrg () {
+        return rg;
+    }
+
+    //construtores
+    public Pessoas(String nome, String cpf, String rg) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.idPessoa=contador;
+        contador++;
     }
 }

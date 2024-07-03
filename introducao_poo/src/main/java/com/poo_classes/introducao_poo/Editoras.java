@@ -1,13 +1,25 @@
 package com.poo_classes.introducao_poo;
 public class Editoras {
-  private  String nomeEditora;
-  
+  private static int contador =1;
 
-  public void setNomeEditora(String nomeEditora) {
-      this.nomeEditora = nomeEditora;
+  private  String nome;
+  private int idEditoras;
+
+  public int getIdEditoras() {
+    return idEditoras;
+  }
+  public void setNomeEditora(String nome) {
+      idEditoras++;
+      this.nome = nome;
   }
   public String getNomeEditora() {
-      return nomeEditora;
+      return nome;
   }
  
+  // construtor
+  public Editoras(String nome) {
+    this.nome=nome;
+    this.idEditoras=contador;
+    contador++;
+  }
 }

@@ -13,7 +13,9 @@ public class IntroducaoPooApplication {
 		Scanner sc = new Scanner(System.in);
 		limpaConsole();
         
-      
+        Autor at = new Autor("DIEGO");
+        Editoras ed=new Editoras("VOZES");
+        Endereco cep = new Endereco(1234);
 
 	}
     public static void limpaConsole() {

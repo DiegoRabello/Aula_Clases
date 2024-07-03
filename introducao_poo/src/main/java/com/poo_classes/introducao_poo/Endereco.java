@@ -5,49 +5,76 @@ import java.rmi.server.LogStream;
 import org.apache.commons.logging.Log;
 
 public class Endereco {
-    private String Cidade;
-    private String Logradouro;
-    private String Complemento;
-    private String Estado;
+    private static int contador=1;
+    
+    private int    idEndereco;
+    private int    cep;
+    private String cidade;
+    private String logradouro;
+    private String complemento;
+    private String estado;
     private int    numero;
-
-    public void setCidade (String Cidade) {
-       if ((Cidade.length()<=58)) {
-            this.Cidade=Cidade;
+    
+    public int getCep() {
+        return cep;
+    }
+    public void setCep(int cep) {
+        this.cep = cep;
+    }
+    public int getIdEndereco() {
+        return idEndereco;
+    }
+    public void setCidade (String cidade) {
+       if ((cidade.length()<=58)) {
+            this.cidade=cidade;
+            idEndereco++;
        } 
     }
-    public void setLogradouro (String Logradouro) {
-        if ((Logradouro.length())<=100) {
-            this.Logradouro=Logradouro;
+    public void setlogradouro (String logradouro) {
+        if ((logradouro.length())<=100) {
+            this.logradouro=logradouro;
         }
     }
-    public void setComplemento (String Complemento) {
-        if ((Complemento.length())<=100) {
-            this.Complemento=Complemento;
+    public void setComplemento (String complemento) {
+        if ((complemento.length())<=100) {
+            this.complemento=complemento;
         }
     }
-    public void setEstado (String Estado) {
-        if ((Estado.length())<=50) {
-            this.Estado = Estado;
+    public void setEstado (String estado) {
+        if ((estado.length())<=50) {
+            this.estado = estado;
         }
     }
     public void setNumero (int numero) {
         this.numero=numero;
     }
     public String getCidade() {
-        return Cidade;
+        return cidade;
     }
-    public String getLogradouro() {
-        return Logradouro;
+    public String getlogradouro() {
+        return logradouro;
     }
-    public String getComplemento() {
-        return Complemento;
+    public String getcomplemento() {
+        return complemento;
     }
     public String getEstado() {
-        return Estado;
+        return estado;
     }
     public int getNumero() {
         return numero;
     }
-    
+    // construtores
+    public Endereco (int cep,String cidade,String logradouro,String complemento,String estado,int numero){
+        this.cep=cep;
+        this.cidade=cidade;
+        this.logradouro=logradouro;
+        this.complemento=complemento;
+        this.estado=estado;
+        this.numero=numero;
+        this.idEndereco=contador;
+        contador++;
+    }
+    public Endereco(int cep){
+        this.cep=cep;
+    }
 }
