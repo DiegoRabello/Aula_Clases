@@ -1,26 +1,19 @@
 package com.poo_classes.introducao_poo;
 
-public class Autor {
-    private static int contador=1;
+import java.security.PublicKey;
 
-    private String nome;
+public class Autor extends Pessoas {
+    private static int contador=1;
     private int idAutor;
-    
-    public void setNomeAutores(String nome) {
-        idAutor++;
-        this.nome = nome;
-    }
-    public String getNome() {
-        
-        return nome;
-    }
+    Endereco endereco;
     public int getIdAutor() {
         return idAutor;
     }
-    //construtor
-    public Autor(String nome){
-        this.nome=nome;
+    public Autor (String nome, String cpf, String rg,Endereco endereco){
+        super(nome, cpf, rg);
+        this.endereco=endereco;
         this.idAutor=contador;
+        contador++;
     }
 
 

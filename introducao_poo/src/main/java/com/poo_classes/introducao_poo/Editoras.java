@@ -1,9 +1,10 @@
 package com.poo_classes.introducao_poo;
 public class Editoras {
   private static int contador =1;
+  private int idEditoras;
 
   private  String nome;
-  private int idEditoras;
+  Endereco endereco;
 
   public int getIdEditoras() {
     return idEditoras;
@@ -17,8 +18,9 @@ public class Editoras {
   }
  
   // construtor
-  public Editoras(String nome) {
+  public Editoras(String nome,Endereco endereco) {
     this.nome=nome;
+    this.endereco=endereco;
     this.idEditoras=contador;
     contador++;
   }

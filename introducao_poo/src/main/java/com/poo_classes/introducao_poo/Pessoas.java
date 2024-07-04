@@ -1,6 +1,6 @@
 package com.poo_classes.introducao_poo;
 
-public class Pessoas {
+public abstract class Pessoas {
     private static int contador=1;
 
     private String nome;
@@ -38,7 +38,7 @@ public class Pessoas {
         return rg;
     }
 
-    //construtores
+    // construtores
     public Pessoas(String nome, String cpf, String rg) {
         this.nome = nome;
         this.cpf = cpf;

@@ -12,11 +12,9 @@ public class IntroducaoPooApplication {
 		SpringApplication.run(IntroducaoPooApplication.class, args);
 		Scanner sc = new Scanner(System.in);
 		limpaConsole();
-        
-        Autor at = new Autor("DIEGO");
-        Editoras ed=new Editoras("VOZES");
-        Endereco cep = new Endereco(1234);
-
+        // Endereco end1 = new Endereco(12345);
+        // Funcionario f1 = new Funcionario("Diego", "123456789", "11213124",end1 );
+       
 	}
     public static void limpaConsole() {
         try {
