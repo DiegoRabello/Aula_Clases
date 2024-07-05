@@ -24,9 +24,6 @@ public class Funcionario extends Pessoas{
         this.cargo = cargo;
     }
     Endereco endereco;
-
-
-
     // construtor de funcionario
    
     public Funcionario (String nome, String cpf, String rg,Endereco endereco,String login ,String senha) {
@@ -51,6 +48,7 @@ public class Funcionario extends Pessoas{
         System.out.println("Salário Bruto: R$ "+this.getSalario());
         System.out.println("Saldo FGTS: R$ "+calculaFGTS());
         System.out.println("Saldo INSS: R$ "+calculaiNSS());
+        
     }
     public double calculaFGTS (){
         return this.getSalario()*0.08;

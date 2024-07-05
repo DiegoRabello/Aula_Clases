@@ -13,7 +13,7 @@ public class IntroducaoPooApplication {
 		Scanner sc = new Scanner(System.in);
 		limpaConsole();
         // Endereco end1 = new Endereco(12345);
-        // Funcionario f1 = new Funcionario("Diego", "123456789", "11213124",end1 );
+        // Funcionario f1 = new Funcionario(null, null, null, end1, null, null);
        
 	}
     public static void limpaConsole() {
