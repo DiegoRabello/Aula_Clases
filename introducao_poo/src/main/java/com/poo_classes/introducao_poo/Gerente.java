@@ -8,7 +8,8 @@ public class Gerente extends Funcionario{
     public int getIdGerente() {
         return idGerente;
     }
-    public Gerente(String login ,String senha,String nome, String cpf , String rg , Endereco endereco){
+    
+        public Gerente(String login ,String senha,String nome, String cpf , String rg , Endereco endereco){
         super(nome, cpf, rg, endereco, login, senha);
         this.endereco=endereco;
         this.idGerente = contador;

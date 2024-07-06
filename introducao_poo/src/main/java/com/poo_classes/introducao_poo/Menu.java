@@ -11,6 +11,7 @@ public class Menu {
         System.out.println("1.Imprimir Contra Cheque");
         System.out.println("2.Imprimir FGTS");
         System.out.println("3.Imprimir INSS");
+        System.out.println("================================");
         opcao = sc.nextInt();
         
         switch (opcao) {
@@ -24,7 +25,7 @@ public class Menu {
                 
                 break;
             case 3:
-                System.out.println("O seu INSS é: "+ funcionario.calculaiNSS());
+                System.out.println("O seu INSS é: "+ funcionario.calculaINSS());
                 break;
         }
 
